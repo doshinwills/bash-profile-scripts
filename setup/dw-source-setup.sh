@@ -1,3 +1,5 @@
+#!/bin/bash
+# Run everytime when there is a script update
 mkdir -p ~/.bash-profile-scripts/.source-scripts
 cp ../*.sh ~/.bash-profile-scripts
 cp ../source-scripts/*.sh ~/.bash-profile-scripts/.source-scripts

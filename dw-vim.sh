@@ -117,6 +117,7 @@ declare -a com=(
 	'Repeating searches in different directions: N'
 	'Replacing old contents with the new ones all over the file: %s/old/new/g'
 	'Replacing old contents with the new ones all over the file: s/old/new/g'
+	'Regex search: :g/<<.*ent>>'
 )
 vimdw_block "$1" "${cur}" "${des}" "${com}"
 cur=$((cur+1))

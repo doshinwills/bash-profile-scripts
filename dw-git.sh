@@ -45,4 +45,18 @@ declare -a com=(
 )
 gitdw_block "$1" "${cur}" "${des}" "${com}"
 cur=$((cur+1))
+
+des='Reset all the local changes'
+declare -a com=(
+	'git restore .'
+)
+gitdw_block "$1" "${cur}" "${des}" "${com}"
+cur=$((cur+1))
+
+des='Delete all local branches'
+declare -a com=(
+	'git checkout master && git branch | grep -v "master" | xargs git branch -D'
+)
+gitdw_block "$1" "${cur}" "${des}" "${com}"
+cur=$((cur+1))
 }

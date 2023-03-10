@@ -127,13 +127,6 @@ declare -a com=(
 lsofdw_block "$1" "${cur}" "${des}" "${com}"
 cur=$((cur+1))
 
-des=''
-declare -a com=(
-	''
-)
-lsofdw_block "$1" "${cur}" "${des}" "${com}"
-cur=$((cur+1))
-
 des='Check Listening Ports'
 declare -a com=(
 	'sudo lsof -nP -iTCP -sTCP:LISTEN'
